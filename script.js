@@ -56,3 +56,22 @@ for (let i = 0; i < daysInYear; i++) {
 }
 
 renderProgressText();
+document.addEventListener('copy', (event) => {
+  event.preventDefault();
+});
+
+document.addEventListener('cut', (event) => {
+  event.preventDefault();
+});
+
+document.addEventListener('contextmenu', (event) => {
+  event.preventDefault();
+});
+
+document.addEventListener('keydown', (event) => {
+  const key = event.key.toLowerCase();
+
+  if ((event.ctrlKey || event.metaKey) && key === 'c') {
+    event.preventDefault();
+  }
+});
