@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Year Progress</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card" id="progressCard">
+        <div class="board">
+          <div class="board-view board-view-dots" id="dotGrid" aria-label="Year progress"></div>
+
+          <div class="board-view board-view-percent" id="percentBoard" aria-label="Percent progress view">
+            <div class="percent-label" id="percentValue">0%</div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="percentValue">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="meta">
+           <div id="yearLabel" class="year"></div>
+          <button id="viewSwitch" class="switch" type="button" aria-pressed="false">
+            %
+          </button>
+          <div class="value" id="progressText" aria-live="polite">
+            <strong></strong>days left
+
+          </div>
+        </footer>
+      </section>
+      <div class="caption">memento mori</div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
